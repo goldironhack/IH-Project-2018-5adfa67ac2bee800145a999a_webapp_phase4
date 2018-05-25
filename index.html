@@ -1,15 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Housing Sniffer</title>
+    <!-- icon -->
+    <link rel="icon" href="https://i.imgur.com/HSYgduZ.png">
+
+    <!-- BootStrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+
+  </head>
+  <body>
+
+    <!-- navBar -->
+      <div class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand"><img src="https://i.imgur.com/cpIlv81.png" alt="HousingSnifferLogo" id="HousingSnifferLogo"/> Housing Sniffer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!--<a class="nav-item nav-link" href="#">About</a> navbar elements-->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item">Housing Sniffer is a web app for finding<br />the best living place in N.Y.C.</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Map -->
     <div class="container">
-        <h1>Hello World!</h1>
-        <button id="btn">Click me</button>
+      <div class="row justify-content-center mt-5">
+        <div class="col-md">
+            <div id="map"></div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col">
+          <button id="getHousingButton">Top 10 afordable districts</button>
+          <button id="test">test</button>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col md-auto">
+          <div id="table"></div>
+        </div>
+      </div>
     </div>
+
+    <!-- footer -->
+    <div class="fixed-bottom">
+      <div>Icons made by
+      <a href="http://www.freepik.com" title="Freepik">Freepik</a>
+      from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+       is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+     </div>
+    </div>
+
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous">
+    </script>
+
+    <!-- Boostrap Jquery stuff -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <!-- D3 -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+
+    <!-- google maps API -->
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0HTI1ZBcWCdA-VxGzRMVvu2vrhn4vgBs&libraries=geometry&callback=initMap">
+    </script>
+
+    <!-- Custom JS -->
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
